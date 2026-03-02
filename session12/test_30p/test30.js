@@ -6,13 +6,13 @@ let products = [
 { id: "P05", name: "Tai nghe Sony WH-1000XM5", price: 350, category: "Phụ kiện", inStock: true }
 ];
 
-function filterStudent() {
-    let listStudent = products.filter((products,index)=>{
-        return products.inStock === true ;
-    })
-    console.log(listStudent);
+function filteredProducts() {
+    let hasInStock = products
+        .filter((product) => product.inStock === true)
+        .sort((a, b) => b.price - a.price);
+    console.log(hasInStock);
 }
-filterStudent();
+filteredProducts();;
 
 function inf() {
     let infStudent = products.filter((products)=>{
@@ -25,4 +25,5 @@ function inf() {
     console.log(output);
     
 }
+
 inf();
